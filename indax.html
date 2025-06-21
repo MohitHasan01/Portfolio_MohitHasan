@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohit Hasan Sojib</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container" id="container">
+    <header>
+      <h1>Mohit Hasan Sojib</h1>
+      <p>Creative Student & Aspiring Developer</p>
+
+      <div class="header-actions">
+        <a class="cv-button" href="cv.pdf" download="Mohit Hasan Sojib-CV.pdf">Download CV</a>
+       <button id="themeToggle" class="dark-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+
+
+
+      <div class="social-icons">
+        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/your-username" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </header>
+
+    <section class="profile-section">
+  <div class="image-container">
+    <img id="profileImage" src="sojib.JPG" alt="Profile Picture of Mohit Hasan Sojib">
+  </div>
+</section>
+
+</div>
+
+    </section>
+
+    <section class="about-section card">
+      <h2>About Me</h2>
+      <p>Hello! I'm Mohit Hasan Sojib, a curious and passionate student who loves solving problems and creating useful tools. I believe in hard work, honesty, and continuous learning.ent, eager to learn and grow. I enjoy working on creative and challenging projects and value hard work, honesty, and improvement.</p>
+    </section>
+
+    <section class="education-section card">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>SSC:</strong>progressive Model School Mymensingh, GPA: 5.00 (2020)</li>
+        <li><strong>HSC:</strong> Notre Dame College Mymensingh, GPA: 5.00 (2022)</li>
+      </ul>
+    </section>
+
+    <section class="skills-section card">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python, C</li>
+        <li>Responsive Design</li>
+        <li>Teamwork & Communication</li>
+      </ul>
+    </section>
+
+    <section class="projects-section card">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Student Result Management:</strong> A web-based system to manage and publish student results.</li>
+        <li><strong>Personal Budget Tracker:</strong> A simple app to track monthly income and expenses.</li>
+      </ul>
+    </section>
+
+    <section class="contact-section card">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      &copy; 2025 Mohit Hasan Sojib
+    </footer>
+  </div>
+
+  <script>
+    function previewImage(event) {
+      const image = document.getElementById('profileImage');
+      image.src = URL.createObjectURL(event.target.files[0]);
+    }
+
+    // Dark mode toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const container = document.getElementById('container');
+    let dark = false;
+
+    themeToggle.addEventListener('click', () => {
+      container.classList.toggle('dark-mode');
+      dark = !dark;
+      themeToggle.innerHTML = dark
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
+    });
+
+    // Optional: Contact form submission alert
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Message sent! (Form handling can be added with backend)');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

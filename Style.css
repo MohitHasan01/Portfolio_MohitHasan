@@ -1,0 +1,261 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2ef;
+  color: #3e2f2f;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #A0522D;
+  animation: slideDown 0.6s ease-out;
+}
+
+header p {
+  color: #5a4b4b;
+  font-size: 1.2rem;
+}
+
+.header-actions {
+  margin: 10px 0;
+}
+
+.cv-button {
+  background-color: #A0522D;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.cv-button:hover {
+  transform: scale(1.05);
+  background-color: #8b4513;
+}
+
+.dark-toggle {
+  background: #fff;
+  border: 2px solid #A0522D;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #A0522D;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.dark-toggle:hover {
+  background-color: #A0522D;
+  color: white;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #A0522D;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #3e2f2f;
+}
+
+/* Profile */
+.profile-section {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.image-container {
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #A0522D;
+  margin-bottom: 10px;
+  transition: transform 0.4s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+.image-container input[type="file"] {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Card Sections */
+.card {
+  background: #fff;
+  border-left: 6px solid #FFCBA4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  animation: fadeIn 1s ease;
+  transition: background 0.3s, transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h2 {
+  color: #A0522D;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  padding-left: 20px;
+  list-style-type: square;
+}
+
+.card p, .card li {
+  font-size: 1rem;
+  color: #3e2f2f;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #A0522D;
+  color: white;
+  border-radius: 10px;
+  animation: fadeIn 1s ease;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff7f0;
+}
+
+form button {
+  padding: 10px;
+  background: #FFCBA4;
+  color: #3e2f2f;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  background: #ffb480;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #2e261f;
+  color: #f1e8e4;
+}
+
+.dark-mode .card {
+  background: #3a2f29;
+  border-left-color: #ffb480;
+}
+
+.dark-mode header h1 {
+  color: #FFCBA4;
+}
+
+.dark-mode .cv-button {
+  background-color: #FFCBA4;
+  color: #3e2f2f;
+}
+
+.dark-mode .dark-toggle {
+  background: #3a2f29;
+  color: #FFCBA4;
+  border-color: #FFCBA4;
+}
+
+.dark-mode footer {
+  background: #201812;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background: #4a3b33;
+  color: white;
+  border: 1px solid #FFCBA4;
+}
+
+.dark-mode form button {
+  background: #ffb480;
+  color: #2c1c1c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .image-container img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
